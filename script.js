@@ -27,12 +27,10 @@ function submitted(loc, tok) {
             document.getElementById('eight').innerText = weatherData.days[0].uvindex
             document.getElementById('nine').innerText = weatherData.days[0].feelslike
             document.getElementById('ten').innerText = weatherData.longitude
+    }
+    )
 
 
-            document.getElementById('success').innerText = "Scroll Down To see the data"
-            document.getElementById('success').style.color = "green"
-        }
-        )
         .catch(error => {
             makingValuesEmpty();
            
@@ -60,21 +58,4 @@ async function checkforerror(location, key) {
     else {
         submitted(location, key);
     }
-}
-function makingValuesEmpty() {
-    document.getElementById('success').innerText = "Unable to get Data"
-    document.getElementById('success').style.color = "red"
-    document.getElementById('one').innerText = " "
-    document.getElementById('two').innerText = " "
-    document.getElementById('long').innerText = " "
-
-    document.getElementById('three').innerText = " "
-    document.getElementById('four').innerText = " "
-    document.getElementById('five').innerText = " "
-    document.getElementById('six').innerText = " "
-
-    document.getElementById('seven').innerText = " "
-    document.getElementById('eight').innerText = " "
-    document.getElementById('nine').innerText = " "
-    document.getElementById('ten').innerText = " "
 }
