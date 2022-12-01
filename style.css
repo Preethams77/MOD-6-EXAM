@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+*{
+    margin:0;
+    box-sizing: border-box;
+    font-family:'DM Sans';
+}
+.container{
+    width:100%;
+    height:100vh;
+    display:flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content:center;
+}
+.rectangle{
+position: absolute;
+width: 1728px;
+height: 500px;
+left: 0px;
+top: 0px;
+background: #000000;
+}
+.top{
+    position: absolute;
+width: 692.27px;
+height: 144px;
+left: 518px;
+top: 50px;
+font-family: 'Inter';
+font-style: normal;
+font-weight:700;
+font-size: 40px;
+line-height: 121px;
+
+color: #FFFFFF;
+
+}
+.rectangle-container{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+.input-box{
+    position: relative;
+    margin-bottom:24px;
+    top:200px;
+    left:14px;
+}
+.input-box input{
+    width:900px;
+    padding:8px;
+    color:white;
+    background-color: #000000;
+}
+.button{
+    position: absolute;
+    width: 900px;
+    height: 58px;
+    left: 430px;
+    top: 330px;
+}
+.button button{
+    border:none;
+    width:100px;
+    padding: 5px;
+    height: 33px;
+    cursor:pointer;
+}
+.bottom{
+    position: absolute;
+width: 912px;
+height: 160px;
+left: 62px;
+top: 530px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 121px;
+color: #000000;
+}
+.box{
+    box-sizing: border-box;
+
+position: absolute;
+width: 1410px;
+height: 820px;
+left: 62px;
+top: 680px;
+
+border: 2px solid #000000;
+}
+#one{
+    position: absolute;
+width: 669.46px;
+height: 74px;
+left: 20px;
+top: 30px;
+font-weight: 400;
+font-size: 50px;
+line-height: 61px;
+color: #000000;
+}
+#two{
+    position: absolute;
+width: 669.46px;
+height: 74px;
+left: 20px;
+top: 100px;
+font-weight: 400;
+font-size: 50px;
+line-height: 61px;
+
+color: #000000;
+
+}
+#three{
+    position: absolute;
+width: 669.46px;
+height: 74px;
+left: 20px;
+top: 170px;
+font-weight: 400;
+font-size: 50px;
+line-height: 61px;
+
+color: #000000;
+
+}
+#four{
+    position: absolute;
+width: 669.46px;
+height: 74px;
+left: 20px;
+top: 250px;
+font-weight: 400;
+font-size: 50px;
+line-height: 61px;
+
+color: #000000;
+
+}
+#five{
+    position: absolute;
+width: 669.46px;
+height: 74px;
+left: 20px;
+top: 330px;
+font-weight: 400;
+font-size: 50px;
+line-height: 61px;
+
+color: #000000;
+
+}
+#six{
+    position: absolute;
+width: 669.46px;
+height: 74px;
+left: 20px;
+top: 410px;
+font-weight: 400;
+font-size: 50px;
+line-height: 61px;
+
+color: #000000;
+
+}
+#seven{
+    position: absolute;
+width: 669.46px;
+height: 74px;
+left: 20px;
+top: 490px;
+font-weight: 400;
+font-size: 50px;
+line-height: 61px;
+
+color: #000000;
+
+}
+#eight{
+    position: absolute;
+width: 669.46px;
+height: 74px;
+left: 20px;
+top: 570px;
+font-weight: 400;
+font-size: 50px;
+line-height: 61px;
+
+color: #000000;
+
+}
+#nine{
+    position: absolute;
+width: 669.46px;
+height: 74px;
+left: 20px;
+top: 650px;
+font-weight: 400;
+font-size: 50px;
+line-height: 61px;
+
+color: #000000;
+
+}
+#ten{
+    position: absolute;
+width: 669.46px;
+height: 74px;
+left: 500px;
+top: 100px;
+font-weight: 400;
+font-size: 50px;
+line-height: 61px;
+
+color: #000000;
+
+}
+
+
