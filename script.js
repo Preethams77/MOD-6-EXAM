@@ -1,61 +1,40 @@
-function submitted(loc, tok) {
-   
-    let url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${loc}?unitGroup=metric&key=${tok}&contentType=json`
-
-    let weatherData;
-    fetch(url)
-        .then(data => {
-            if (document.getElementById('location').value == " ") {
-                alert("Please enter location")
-            }
-            return data.json()
+function accesskey() {
+        const inputLocation = document.getElementById("location");
+        const acesskey = document.getElementById("accesstoken");
+      
+        if (inputLocation.value !== "" && acesskey.value !== "") {
+          const loc = document.getElementById("location").value;
+          const token = "NCB8JKE9S4EUUS4ZBUL7T8QZS";
+      
+          const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${loc}?unitGroup=us&key=${token}&contentType=json`;
+          console.log(url);
+          async function getData() {
+            const response = await fetch(url);
+           if(response.status===200)
+            {
+            const data = await response.json();
+            console.log(data);
+            document.getElementById('one').innerText=`Location: ${data.address}`
+            document.getElementById('two').innerText=`Lat: ${data.latitude}`
+            document.getElementById('three').innerText=`TimeZone: ${data.timezone}`
+            document.getElementById('four').innerText=`Wind Speed: ${data.currentConditions.windspeed}`
+            document.getElementById('five').innerText=`Pressure: ${data.currentConditions.pressure}`
+            document.getElementById('six').innerText=`Humidity: ${data.currentConditions.humidity}`
+            document.getElementById('seven').innerText=`Wind Direction: ${data.currentConditions.winddir}`
+            document.getElementById('eight').innerText=`UV Index: ${data.currentConditions.uvindex}`
+            document.getElementById('nine').innerText=`Feels Like: ${data.currentConditions.feelslike}`
+            document.getElementById('ten').innerText=`Long: ${data.longitude}`
+          }
+        
+          else{
+            alert("Invalid Location")
+          }
+     }
+          getData();
+        
+        } else if (inputLocation.value == "") {
+          alert("Please Enter Valid Location");
+        } else if (acesskey.value == "") {
+          alert("Please Enter Valid Acess Token");
         }
-        )
-
-        .then(json => {
-            console.log(json)
-            weatherData = json;
-            document.getElementById('one').innerText = weatherData.address
-            document.getElementById('two').innerText = weatherData.latitude
-           
-            document.getElementById('three').innerText = weatherData.timezone
-            document.getElementById('four').innerText = weatherData.days[0].windspeed
-            document.getElementById('five').innerText = weatherData.days[0].pressure
-            document.getElementById('six').innerText = weatherData.days[0].humidity
-
-            document.getElementById('seven').innerText = weatherData.days[0].winddir
-            document.getElementById('eight').innerText = weatherData.days[0].uvindex
-            document.getElementById('nine').innerText = weatherData.days[0].feelslike
-            document.getElementById('ten').innerText = weatherData.longitude
     }
-    )
-
-
-        .catch(error => {
-            makingValuesEmpty();
-           
-            alert("Failed to load Weather info");
-            throw (error);
-        })
-
-
-}
-
-async function accesskey() {
-    const locat = document.getElementById('location').value;
-
-    const token = document.getElementById('accesstoken').value;
-    await checkforerror(locat, token)
-}
-async function checkforerror(location, key) {
-
-    if (location == "") {
-        alert("Please Enter Location")
-    }
-    else if (key == "") {
-        alert("Please Enter Access Key")
-    }
-    else {
-        submitted(location, key);
-    }
-}
